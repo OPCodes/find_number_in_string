@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload = function (){
+
+            var str = "a1b2ks23j000fl3456jls24j5lsg345kdre123";
+            var arr = [];
+            var arr1 = [];
+            function charNum(str){
+                var arr = [];
+                for( var i = 0; i < str.length; i++ ){
+                    if( Number(str.charAt(i)) === Number(str.charAt(i)) ){
+                        arr.push(str[i]);
+                    }
+                }
+                return arr;
+            }
+            function charNums(str){
+                var arr = [];
+                var str1 = "";
+                for( var i = 0; i < str.length; i++ ){
+                    if( !isNaN(str.charAt(i)) ){
+                        str1 += str.charAt(i);
+                    } else {
+                        if( str1 != "" ){
+                            arr.push(str1);
+                            str1 = "";
+                        }
+                    }
+                }
+                if( str1 != "" ){
+                    arr.push(str1);
+                    str1 = "";
+                }
+                return arr;
+            }
+            
+            console.log(charNum(str));
+            console.log(charNums(str));
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+    
